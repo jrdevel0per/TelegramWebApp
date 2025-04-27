@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Reklam Formu | Telegram Kanalları</title>
+    <meta name="description" content="Premium reklam başvuru formu. Kanalınızı öne çıkarın ve daha fazla üye kazanın.">
+    <link rel="stylesheet" href="form-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="form-page">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span style="margin-left: 8px;">Ana Sayfaya Dön</span>
+        </a>
+
+        <div class="contact-section premium-section">
+            <h2>👑 Premium Reklam Başvuru Formu</h2>
+
+            <div class="contact-info-box premium-info">
+                <p><i class="fas fa-crown"></i> Premium reklamlar ana sayfada özel efektlerle gösterilir</p>
+                <p><i class="fas fa-star"></i> 7/24 aktif destek ve öncelikli hizmet</p>
+                <p><i class="fas fa-chart-line"></i> Detaylı istatistikler ve raporlama</p>
+                <p><i class="fas fa-clock"></i> 30 gün boyunca üst sırada gösterim</p>
+            </div>
+
+            <form id="premiumForm">
+                <div class="form-group">
+                    <label for="channelName">Kanal Adı</label>
+                    <input type="text" id="channelName" name="channelName" required placeholder="Örn: Premium Kanal">
+                </div>
+
+                <div class="form-group">
+                    <label for="telegramLink">Telegram Linki</label>
+                    <input type="url" id="telegramLink" name="telegramLink" required placeholder="Örn: https://t.me/kanal">
+                </div>
+
+                <div class="form-group">
+                    <label for="memberCount">Üye Sayısı</label>
+                    <input type="number" id="memberCount" name="memberCount" required placeholder="Örn: 1000">
+                </div>
+
+                <div class="form-group">
+                    <label for="channelDesc">Kanal Açıklaması</label>
+                    <textarea id="channelDesc" name="channelDesc" required placeholder="Kanalınızı kısaca tanıtın..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactInfo">İletişim Bilgisi</label>
+                    <input type="text" id="contactInfo" name="contactInfo" required placeholder="Telegram kullanıcı adınız">
+                </div>
+
+                <button type="submit" class="submit-button premium-submit">
+                    <i class="fas fa-paper-plane"></i>
+                    <span style="margin-left: 8px;">Başvuruyu Gönder</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    function handlePremiumSubmit(event) {
+        event.preventDefault();
+        
+        const channelName = document.getElementById('channelName').value;
+        const channelLink = document.getElementById('channelLink').value;
+        const currentFollowers = document.getElementById('currentFollowers').value;
+        const dailyViews = document.getElementById('dailyViews').value;
+        const description = document.getElementById('description').value;
+        const contactInfo = document.getElementById('contactInfo').value;
+
+        const formatNumber = (num) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        
+        const telegramMessage = `⭐ Premium Reklam Başvurusu!%0A%0A` +
+                              `📌 Kanal Adı: ${channelName}%0A` +
+                              `🔗 Kanal Linki: ${channelLink}%0A` +
+                              `👥 Mevcut Takipçi: ${formatNumber(currentFollowers)}%0A` +
+                              `👁️ Günlük Görüntülenme: ${formatNumber(dailyViews)}%0A` +
+                              `📝 Açıklama: ${description}%0A` +
+                              `📞 İletişim: ${contactInfo}`;
+        
+        window.open(`https://t.me/Altin_vip_admin?text=${telegramMessage}`, '_blank');
+        
+        document.getElementById('premiumForm').reset();
+        alert('Premium başvurunuz alındı! En kısa sürede sizinle iletişime geçeceğiz.');
+        
+        return false;
+    }
+    </script>
+</body>
+</html> 

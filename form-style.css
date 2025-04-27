@@ -1,0 +1,301 @@
+/* ================ Form Sayfası Ana Stiller ================ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.form-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ================ Geri Dön Butonu ================ */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    color: #2962ff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(41, 98, 255, 0.2);
+}
+
+/* ================ Form Bölümü ================ */
+.contact-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.contact-info-box {
+    background: linear-gradient(135deg, #e0f2ff 0%, #f0f7ff 100%);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-info-box p {
+    margin: 10px 0;
+    color: #2c3e50;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ================ Form Elemanları ================ */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #2c3e50;
+    transition: border-color 0.3s ease;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2962ff;
+}
+
+/* ================ Submit Butonu ================ */
+.submit-button {
+    background: linear-gradient(45deg, #2962ff, #3d7dff);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(41, 98, 255, 0.3);
+}
+
+/* Premium Form Özel Stilleri */
+.premium-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #FFD700;
+}
+
+.premium-info {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff5cc 100%);
+    border: 1px solid #FFD700;
+}
+
+.premium-submit {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+}
+
+.premium-submit:hover {
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* ================ Responsive Tasarım ================ */
+@media (max-width: 768px) {
+    .form-page {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .contact-section {
+        padding: 25px;
+    }
+
+    .contact-section h2 {
+        font-size: 1.6em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .submit-button {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-info-box {
+        padding: 15px;
+    }
+
+    .contact-info-box p {
+        font-size: 1em;
+    }
+}
+
+/* ================ FAQ Stilleri ================ */
+.faq-container {
+    margin-top: 30px;
+}
+
+.faq-category {
+    margin-bottom: 40px;
+}
+
+.faq-category h3 {
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-category h3 i {
+    color: #2962ff;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 15px 20px;
+    background: #fff;
+    color: #2c3e50;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.faq-question i {
+    color: #2962ff;
+    font-size: 1.1em;
+}
+
+.faq-answer {
+    padding: 15px 20px;
+    color: #546e7a;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
+}
+
+.faq-answer i {
+    color: #00b894;
+    margin-top: 3px;
+}
+
+/* İletişim Butonu */
+.contact-button-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e8ed;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #0088cc, #00a8ff);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
+}
+
+.contact-button i {
+    font-size: 1.2em;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .faq-category h3 {
+        font-size: 1.2em;
+    }
+
+    .faq-question, .faq-answer {
+        padding: 12px 15px;
+    }
+
+    .contact-button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-category {
+        margin-bottom: 30px;
+    }
+
+    .faq-item:hover {
+        transform: none;
+    }
+} 

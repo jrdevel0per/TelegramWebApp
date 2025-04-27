@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standart Reklam Formu | Telegram Kanalları</title>
+    <meta name="description" content="Standart reklam başvuru formu. Kanalınızı tanıtın ve yeni üyeler kazanın.">
+    <link rel="stylesheet" href="form-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="form-page">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span style="margin-left: 8px;">Ana Sayfaya Dön</span>
+        </a>
+
+        <div class="contact-section">
+            <h2>📢 Standart Reklam Başvuru Formu</h2>
+
+            <div class="contact-info-box">
+                <p><i class="fas fa-bullhorn"></i> Kanalınız ana sayfada standart kartlarla gösterilir</p>
+                <p><i class="fas fa-users"></i> Yeni üyeler kazanın</p>
+                <p><i class="fas fa-eye"></i> 15 gün boyunca görünür kalın</p>
+                <p><i class="fas fa-check-circle"></i> Uygun fiyatlı reklam seçeneği</p>
+            </div>
+
+            <form id="standardForm">
+                <div class="form-group">
+                    <label for="channelName">Kanal Adı</label>
+                    <input type="text" id="channelName" name="channelName" required placeholder="Örn: Haber Kanalı">
+                </div>
+
+                <div class="form-group">
+                    <label for="telegramLink">Telegram Linki</label>
+                    <input type="url" id="telegramLink" name="telegramLink" required placeholder="Örn: https://t.me/kanal">
+                </div>
+
+                <div class="form-group">
+                    <label for="memberCount">Üye Sayısı</label>
+                    <input type="number" id="memberCount" name="memberCount" required placeholder="Örn: 1000">
+                </div>
+
+                <div class="form-group">
+                    <label for="channelType">Kanal Türü</label>
+                    <select id="channelType" name="channelType" required>
+                        <option value="">Seçiniz...</option>
+                        <option value="haber">Haber</option>
+                        <option value="eglence">Eğlence</option>
+                        <option value="teknoloji">Teknoloji</option>
+                        <option value="spor">Spor</option>
+                        <option value="egitim">Eğitim</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="channelDesc">Kanal Açıklaması</label>
+                    <textarea id="channelDesc" name="channelDesc" required placeholder="Kanalınızı kısaca tanıtın..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactInfo">İletişim Bilgisi</label>
+                    <input type="text" id="contactInfo" name="contactInfo" required placeholder="Telegram kullanıcı adınız">
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i>
+                    <span style="margin-left: 8px;">Başvuruyu Gönder</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
